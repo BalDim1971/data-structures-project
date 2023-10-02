@@ -30,9 +30,9 @@ class TestStack(unittest.TestCase):
 		'''
 		self.my_stack.push('data1')
 		self.my_stack.push('data2')
-		self.assertEqual(self.my_stack.pop().data, 'data2')
+		self.assertEqual(self.my_stack.pop(), 'data2')
 		self.assertEqual(self.my_stack.size, 1)
-		self.assertEqual(self.my_stack.pop().data, 'data1')
+		self.assertEqual(self.my_stack.pop(), 'data1')
 		self.assertEqual(self.my_stack.size, 0)
 		self.assertEqual(self.my_stack.pop(), None)
 		

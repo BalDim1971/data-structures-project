@@ -43,7 +43,7 @@ class Stack:
         if self.size == 0 or self.top is None:
             return None
         
-        result = self.top
+        result = self.top.data
         self.top = self.top.next_node
         self.size -= 1
         
