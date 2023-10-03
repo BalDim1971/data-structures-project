@@ -1,11 +1,11 @@
 """Здесь надо написать тесты с использованием unittest для модуля stack."""
 
 import unittest
-
 """
 Импорт модуля, содержащего функции для тестирования
 """
 from src.stack import Stack
+
 
 class TestStack(unittest.TestCase):
 	'''
@@ -14,6 +14,7 @@ class TestStack(unittest.TestCase):
 	
 	def setUp(self) -> None:
 		self.my_stack = Stack()
+	
 	def test_push(self):
 		'''
 		Проверяем добавление элемента
@@ -35,4 +36,10 @@ class TestStack(unittest.TestCase):
 		self.assertEqual(self.my_stack.pop(), 'data1')
 		self.assertEqual(self.my_stack.size, 0)
 		self.assertEqual(self.my_stack.pop(), None)
-		
+	
+	def test_str(self):
+		'''
+		Проверяем магический метод __str__
+		'''
+		self.my_stack.push('data1')
+		self.assertEqual(str(self.my_stack), 'data1')

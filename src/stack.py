@@ -20,6 +20,12 @@ class Stack:
         
         self.size = 0
         self.top = None
+    
+    def __str__(self):
+        '''
+        Возвращает данные верхнего узла
+        '''
+        return self.top.data
 
     def push(self, data):
         """
