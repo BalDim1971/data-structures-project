@@ -41,14 +41,11 @@ class LinkedList:
 	def __str__(self) -> str:
 		"""Вывод данных односвязного списка в строковом представлении"""
 		node = self.head
-		if node is None:
-			print(str(None))
-			return str(None)
 		
 		ll_string = ''
 		while node:
-			ll_string += f' {str(node.data)} ->'
+			ll_string += f'{str(node.data)} -> '
 			node = node.next_node
 		
-		ll_string += ' None'
-		return ll_string.strip()
+		ll_string += 'None'
+		return ll_string
